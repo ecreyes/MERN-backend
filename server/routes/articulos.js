@@ -78,8 +78,8 @@ app.put('/articulo/:id', (req, res) => {
     });
 });
 
-app.delete('/articulo', (req, res) => {
-    let id = req.body.id;
+app.delete('/articulo/:id', (req, res) => {
+    let id = req.params.id;
     Articulo.findById(id, (error, articuloDB) => {
         if (error) {
             res.status(400).json({
