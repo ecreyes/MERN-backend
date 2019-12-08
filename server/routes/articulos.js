@@ -72,7 +72,11 @@ app.put('/articulo/:id', (req, res) => {
         } else {
             res.json({
                 ok: true,
-                articulo: articulo
+                articulo:{
+                    _id:id,
+                    titulo:articulo.titulo,
+                    cuerpo:articulo.cuerpo
+                }
             });
         }
     });
