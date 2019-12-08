@@ -96,6 +96,7 @@ app.delete('/articulo/:id', (req, res) => {
                 } else {
                     res.json({
                         ok: true,
+                        articulo:articuloDB,
                         mensaje: resultado
                     });
                 }
